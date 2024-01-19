@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Document</title>
         <script defer src="js/devicemotion.js"></script>
+        <link rel="stylesheet" href="css/Index.css">
+        
     </head>
     <body>
-        <button id="request">Nur für Apple macOS: Button drücken, um Erlaubnis zu erteilen!</button>
-        <p id="dmeSupported"> Info über Device Motion</p>
-        <h2 id="xBeschl"> Daten x</h2>
-        <h2 id="yBeschl"> Daten y</h2>
-        <h2 id="zBeschl"> Daten z</h2>
+    <div id="meinSpielfeld" class="spielfeld">
+        <div id="meinBall" class="ball"></div>
+        <div id="meinTor" class="goal"></div>
+    </div>
+    <button id="myBtn">Ändere Ballposition</button>
+    <p id="ausgabe">Ausgabe</p>
     </body>
 </html>
