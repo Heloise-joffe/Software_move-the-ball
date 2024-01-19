@@ -39,8 +39,8 @@ ausgabeText+= "gamma: " + event.gamma.toFixed(1) + "<br>";
 ausgabeText += "top: " + ball.style.top+ "<br>";
 ausgabeText += "left: " + ball.style.left+ "<br>";
 ausgabe.innerHTML= ausgabeText;
-top = Math.max(0, Math.min(fieldHeight, top + event.gamma / 10)); // Utilisez event.gamma pour le déplacement vertical
-left = Math.max(0, Math.min(fieldWidth, left + event.beta / 10)); // Utilisez event.beta pour le déplacement horizontal
+top = Math.max(0, Math.min(fieldHeight, top + event.beta / 10)); // Utilisez event.gamma pour le déplacement vertical
+left = Math.max(0, Math.min(fieldWidth, left + event.gamma / 10)); // Utilisez event.beta pour le déplacement horizontal
 
 // nouvelle endroit de la balle
 ball.style.top= top + "px";
