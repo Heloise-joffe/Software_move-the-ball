@@ -45,18 +45,14 @@ ausgabe.innerHTML= ausgabeText;
 top = Math.max(0, Math.min(fieldHeight, top + event.beta / 10)); // Utilisez event.gamma pour le déplacement vertical
 left = Math.max(0, Math.min(fieldWidth, left + event.gamma / 10)); // Utilisez event.beta pour le déplacement horizontal
 
- if (top>300){
-    top =300;
+ if (top>180){
+    top =180;
 }
-if (top<0){
-    top=0;
+
+if (left>180){
+    left =180;
 }
-if (left>300){
-    left =300;
-}
-if (left<0){
-    left =0;
-}
+
 // nouvelle endroit de la balle
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
