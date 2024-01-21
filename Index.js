@@ -1,6 +1,7 @@
 "use strict";
 
-
+function initPlay()
+{
 alert("Move the ball in the cube");
 let ball = document.getElementById("meinBall");
 let ausgabe= document.getElementById("ausgabe");
@@ -20,6 +21,7 @@ if (window.DeviceOrientationEvent)
 }
 else{
 alert("Keine Device Orientation verfügbar");
+}
 }
 function handleEvent(event) {
 let zeit = Date.now(); // Zeit in Millisekunden seit 1.1.1970
@@ -54,6 +56,7 @@ if (left>180){
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
   if (top <=151 && top >= 149 && left <=151 && left >= 149){
-  alert ("You win !!! Play again");}
+  alert ("You win !!! Play again");
+  initPlay();}
 }
 }
