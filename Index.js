@@ -44,17 +44,16 @@ ausgabeText += "left: " + ball.style.left+ "<br>";
 ausgabe.innerHTML= ausgabeText;
 top = Math.max(0, Math.min(fieldHeight, top + event.beta / 10)); // Utilisez event.gamma pour le déplacement vertical
 left = Math.max(0, Math.min(fieldWidth, left + event.gamma / 10)); // Utilisez event.beta pour le déplacement horizontal
-
  if (top>180){
     top =180;
 }
-
 if (left>180){
     left =180;
 }
-
 // nouvelle endroit de la balle
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
 }
+ if (ball.style.top == goal.style.top && ball.style.left == goal.style.left){
+  alert ("You win !!! Play again");}
 }
