@@ -53,7 +53,7 @@ if (left>180){
 // nouvelle endroit de la balle
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
-}
- if (ball.style.top <=151 && ball.style.top >= 149 && ball.style.left <=151 && ball.style.left >= 149){
+  if (top <=151 && top >= 149 && left <=151 && left >= 149){
   alert ("You win !!! Play again");}
+}
 }
