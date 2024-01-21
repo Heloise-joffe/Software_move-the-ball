@@ -54,6 +54,6 @@ if (left>180){
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
 }
- if (ball.style.top == goal.style.top && ball.style.left == goal.style.left){
+ if (ball.style.top <=151 && ball.style.top >= 149 && ball.style.left <=151 && ball.style.left >= 149){
   alert ("You win !!! Play again");}
 }
