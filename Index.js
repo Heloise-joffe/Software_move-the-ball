@@ -28,32 +28,37 @@ let zeit = Date.now(); // Zeit in Millisekunden seit 1.1.1970
 if(zeit > vorigeZeit+ 50) {
 vorigeZeit= zeit;
 
-//parseInt renvoie le premier nombre (entier) trouvé, pxsupprime
+//parseInt gibt die erste gefundene (ganze) Zahl zurück
 let top = parseInt(ball.style.top);
 let left= parseInt(ball.style.left);
 let ausgabeText= "";
-
+ 
+//  ob tatsächliche Daten des Ereignisses verfügbar sind...
 if(event.beta!= null) { 
-// si des données réelles de l'événement sont disponibles...
-// beta= degrés dans la plage de valeurs [-180, +180] vers l'avant -vers l'arrière +
+
+// beta= Grad im Wertebereich [-180, +180] vorwärts-, rückwärts +
 ausgabeText+= "beta: " + event.beta.toFixed(1) + "<br>";
-// gamma= degrés dans la plage de valeurs [-90, +90] vers la droite + vers la gauche -
+// gamma = Grad im Wertebereich [-180, +180] vorwärts-, rückwärts +
 ausgabeText+= "gamma: " + event.gamma.toFixed(1) + "<br>";
 }
 ausgabeText += "top: " + ball.style.top+ "<br>";
 ausgabeText += "left: " + ball.style.left+ "<br>";
 ausgabe.innerHTML= ausgabeText;
-top = Math.max(0, Math.min(fieldHeight, top + event.beta / 10)); // Utilisez event.gamma pour le déplacement vertical
-left = Math.max(0, Math.min(fieldWidth, left + event.gamma / 10)); // Utilisez event.beta pour le déplacement horizontal
+top = Math.max(0, Math.min(fieldHeight, top + event.beta / 10)); // Beta für vertikale Verschiebung nehmen
+left = Math.max(0, Math.min(fieldWidth, left + event.gamma / 10)); // Gamma für horizontale Verschiebung nehmen
+
+ //Um das Verlassen des Feldes zu vermeiden
  if (top>180){
     top =180;
 }
 if (left>180){
     left =180;
 }
-// nouvelle endroit de la balle
+ 
+//  neuer Ort des Balles
 ball.style.top= top + "px";
 ball.style.left= left+ "px";
+ //Um zu gewinnen
   if (top <=151 && top >= 149 && left <=151 && left >= 149){
   alert ("You win !!! Play again");}
 }
